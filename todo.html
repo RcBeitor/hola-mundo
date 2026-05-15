@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tareas — RcBeitor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="claro">
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="tiempo.html">El Tiempo</a>
+        <a href="todo.html" class="activo">Tareas</a>
+        <a href="sobre-mi.html">Sobre mí</a>
+        <button id="btnTema">🌙 Modo oscuro</button>
+    </nav>
+
+    <main>
+        <div class="tarjeta-grande">
+            <h2 class="seccion-titulo">✅ Lista de tareas</h2>
+
+            <div class="todo-input">
+                <input type="text" id="inputTarea" placeholder="Nueva tarea..." maxlength="80">
+                <button id="btnAnadir">Añadir</button>
+            </div>
+
+            <div class="todo-filtros">
+                <button class="filtro activo-filtro" data-filtro="todas">Todas</button>
+                <button class="filtro" data-filtro="pendientes">Pendientes</button>
+                <button class="filtro" data-filtro="completadas">Completadas</button>
+            </div>
+
+            <ul id="listaTareas"></ul>
+
+            <div class="todo-footer">
+                <span id="contadorPendientes"></span>
+                <button id="btnLimpiar">Borrar completadas</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+    <script src="todo.js"></script>
+</body>
+</html>

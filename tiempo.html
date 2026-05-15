@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Tiempo — RcBeitor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="claro">
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="tiempo.html" class="activo">El Tiempo</a>
+        <a href="todo.html">Tareas</a>
+        <a href="sobre-mi.html">Sobre mí</a>
+        <button id="btnTema">🌙 Modo oscuro</button>
+    </nav>
+
+    <main>
+        <div class="tarjeta-grande">
+            <h2 class="seccion-titulo">🌤️ El Tiempo</h2>
+
+            <div class="buscador-ciudad">
+                <input type="text" id="inputCiudad" placeholder="Escribe una ciudad..." maxlength="50">
+                <button id="btnBuscar">Buscar</button>
+            </div>
+            <p id="errorCiudad" class="error-msg"></p>
+
+            <div id="resultadoTiempo" class="resultado-tiempo oculto">
+                <div class="ciudad-nombre" id="ciudadNombre"></div>
+                <div class="tiempo-icono" id="tiempoIcono"></div>
+                <div class="tiempo-desc" id="tiempoDesc"></div>
+                <div class="tiempo-datos">
+                    <div class="dato">
+                        <span class="dato-icono">🌡️</span>
+                        <span id="temperatura"></span>
+                        <span class="dato-label">Temperatura</span>
+                    </div>
+                    <div class="dato">
+                        <span class="dato-icono">💧</span>
+                        <span id="humedad"></span>
+                        <span class="dato-label">Humedad</span>
+                    </div>
+                    <div class="dato">
+                        <span class="dato-icono">💨</span>
+                        <span id="viento"></span>
+                        <span class="dato-label">Viento</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="cargando" class="cargando oculto">Buscando datos...</div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+    <script src="tiempo.js"></script>
+</body>
+</html>
