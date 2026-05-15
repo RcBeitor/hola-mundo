@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    transition: background 0.4s, color 0.4s;
+}
+
+/* TEMA CLARO */
+body.claro {
+    background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+    background-size: 300% 300%;
+    animation: gradiente 8s ease infinite;
+    color: #2d3748;
+}
+
+/* TEMA OSCURO */
+body.oscuro {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    background-size: 300% 300%;
+    animation: gradiente 8s ease infinite;
+    color: #e2e8f0;
+}
+
+@keyframes gradiente {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* NAVEGACION */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+nav a.activo {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+#btnTema {
+    margin-left: auto;
+    padding: 0.4rem 1rem;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+#btnTema:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* CONTENIDO PRINCIPAL */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 60px);
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    transition: color 0.3s;
+}
+
+.subtitulo {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* FECHA Y HORA */
+#fechaHora {
+    text-align: center;
+    background: rgba(0,0,0,0.2);
+    backdrop-filter: blur(6px);
+    padding: 0.8rem 2rem;
+    border-radius: 12px;
+    color: white;
+}
+
+#hora {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+
+#fecha {
+    font-size: 1rem;
+    opacity: 0.85;
+    margin-top: 0.2rem;
+}
+
+/* TARJETAS */
+.tarjeta {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.tarjeta input {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    outline: none;
+    background: rgba(255,255,255,0.9);
+    color: #2d3748;
+}
+
+.tarjeta h2 {
+    font-size: 1.3rem;
+    color: white;
+    min-height: 2rem;
+}
+
+/* BOTON CONTADOR */
+#btnContador {
+    padding: 0.7rem 2rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 10px;
+    background: white;
+    color: #764ba2;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.2s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+#btnContador:active {
+    transform: scale(0.95);
+}
+
+#contador {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+/* PAGINA SOBRE MI */
+.sobre-mi-contenido {
+    max-width: 600px;
+    width: 100%;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+}
+
+.sobre-mi-contenido h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.sobre-mi-contenido p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 0.8rem;
+    opacity: 0.95;
+}
+
+.sobre-mi-contenido .tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.25);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin: 0.2rem;
+}

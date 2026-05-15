@@ -4,46 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hola Mundo</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f4f8;
-            flex-direction: column;
-        }
-        h1 {
-            color: #2d3748;
-            font-size: 3rem;
-        }
-        p {
-            color: #718096;
-            font-size: 1.2rem;
-            margin-top: 0.5rem;
-        }
-        #reloj {
-            color: #2d3748;
-            font-size: 2rem;
-            font-weight: bold;
-            margin-top: 1rem;
-            letter-spacing: 0.1rem;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>¡Hola Mundo!</h1>
-    <p>Creado por <strong>RcBeitor</strong></p>
-    <div id="reloj"></div>
-    <script>
-        function actualizarReloj() {
-            const ahora = new Date();
-            document.getElementById('reloj').textContent = ahora.toLocaleTimeString('es-ES');
-        }
-        actualizarReloj();
-        setInterval(actualizarReloj, 1000);
-    </script>
+<body class="claro">
+
+    <nav>
+        <a href="index.html" class="activo">Inicio</a>
+        <a href="sobre-mi.html">Sobre mí</a>
+        <button id="btnTema">🌙 Modo oscuro</button>
+    </nav>
+
+    <main>
+        <h1 id="titulo">¡Hola Mundo!</h1>
+        <p class="subtitulo">Creado por <strong>RcBeitor</strong></p>
+
+        <div id="fechaHora">
+            <div id="hora"></div>
+            <div id="fecha"></div>
+        </div>
+
+        <div class="tarjeta">
+            <input type="text" id="inputNombre" placeholder="Escribe tu nombre..." maxlength="30">
+            <h2 id="saludo"></h2>
+        </div>
+
+        <div class="tarjeta">
+            <button id="btnContador">¡Haz clic aquí!</button>
+            <span id="contador">0</span>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
 </body>
 </html>
