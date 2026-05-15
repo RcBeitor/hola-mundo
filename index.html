@@ -13,6 +13,7 @@
             height: 100vh;
             margin: 0;
             background-color: #f0f4f8;
+            flex-direction: column;
         }
         h1 {
             color: #2d3748;
@@ -23,10 +24,26 @@
             font-size: 1.2rem;
             margin-top: 0.5rem;
         }
+        #reloj {
+            color: #2d3748;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-top: 1rem;
+            letter-spacing: 0.1rem;
+        }
     </style>
 </head>
 <body>
     <h1>¡Hola Mundo!</h1>
     <p>Creado por <strong>RcBeitor</strong></p>
+    <div id="reloj"></div>
+    <script>
+        function actualizarReloj() {
+            const ahora = new Date();
+            document.getElementById('reloj').textContent = ahora.toLocaleTimeString('es-ES');
+        }
+        actualizarReloj();
+        setInterval(actualizarReloj, 1000);
+    </script>
 </body>
 </html>
